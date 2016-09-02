@@ -6,32 +6,28 @@ const store: Store = {
   items: {
     '1': {
       id: 1,
-      title: 'Some Thoughts on Feelings',
-      subtitle: 'They\'re not what you expect',
+      title: 'The Power of Maybe',
+      subtitle: 'You don\'t always have to say "yes" or "no".',
       text:
-`Sometimes you just need to ride for the dancing.
+`Imagine getting an invite to the party of the year.
 
 But other times there are things you do.
       `,
     },
     '2': {
       id: 2,
-      title: 'Some Thoughts on Feelings',
-      subtitle: 'They\'re not what you expect',
+      title: 'What Wake Boaring Taught Me About Running a Startup',
+      subtitle: 'It\'s not what you expect.',
       text:
-`Sometimes you just need to ride for the dancing.
-
-But other times there are things you do.
+`It's early Friday morning and the glassy water of the lake ripples across my feet.
       `,
     },
     '4': {
       id: 4,
-      title: 'Some Thoughts on Feelings',
-      subtitle: 'They\'re not what you expect',
+      title: 'Idea: Soylent + Coffee?',
+      subtitle: 'How did I not think of this before?',
       text:
-`Sometimes you just need to ride for the dancing.
-
-But other times there are things you do.
+`Okay guys, let's do this. Soylent and Coffee are literally two of my favorite things.
       `,
     },
   },

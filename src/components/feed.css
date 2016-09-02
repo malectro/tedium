@@ -7,12 +7,14 @@
 
 .feed {
   composes: page from 'src/styles/ui.css';
+  flex-flow: column;
   flex: 1 0 0;
   list-style: none;
   padding: 0;
 }
 
 .article {
+  flex-flow: column;
   max-width: 660px;
   padding: 20px;
   margin-bottom: 10px;
@@ -20,6 +22,33 @@
   border: 1px solid rgba(0,0,0,.09);
   border-radius: 3px;
   background: white;
+}
+
+.avatar {
+  margin-right: 10px;
+  width: 36px;
+  height: 36px;
+  background: gray;
+  border-radius: 50%;
+}
+
+.headerText {
+  composes: title2 from 'src/styles/fonts.css';
+  flex-flow: column;
+  line-height: 1.4;
+}
+
+.byLine {
+  font-size: 14px;
+  color: rgb(0, 171, 107);
+}
+.info {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.44);
+}
+
+.text {
+  margin-top: 10px;
 }
 
 .title {

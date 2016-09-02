@@ -16,11 +16,11 @@ type Props = {
 
 const Feed = ({store}: Props) => (
   <div className={css.bg}>
-    <ol className={css.feed}>
+    <div className={css.feed}>
       { map(store.items, item => (
         <ArticleSummary key={item.id} item={item} />
       )) }
-    </ol>
+    </div>
   </div>
 );
 
@@ -28,13 +28,24 @@ export default withStore()(Feed);
 
 
 const ArticleSummary = ({item}: {item: Item}) => (
-  <li className={css.article}>
+  <div className={css.article}>
+    <div className={css.header}>
+      <div className={css.avatar}></div>
+      <div className={css.headerText}>
+        <div className={css.byLine}>
+          Kyle Warren
+        </div>
+        <div className={css.info}>
+          Aug 26 &middot; 2 min read
+        </div>
+      </div>
+    </div>
     <Link className={css.text} to={`/${item.id}`}>
       <h3 className={css.title}>{item.title}</h3>
       <h4 className={css.subtitle}>{item.subtitle}</h4>
       <p className={css.hint}>{item.text.split('\n')[0]}</p>
       <span className={css.more}>Read more...</span>
     </Link>
-  </li>
+  </div>
 );
 
