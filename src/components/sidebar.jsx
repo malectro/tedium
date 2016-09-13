@@ -9,7 +9,7 @@ import css from './sidebar.css';
 export default ({className, store}) => (
   <div className={className}>
     { map(store.recs, rec => (
-      <section className={css.section} id={rec.slug}>
+      <section className={css.section} key={rec.slug}>
         <header>
           <div className={css.title}>{rec.title}</div>
           <div className={css.subtitle}>{rec.subtitle}</div>
