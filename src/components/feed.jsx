@@ -3,11 +3,13 @@
 import type {Store, Item} from 'src/store-types';
 
 import React from 'react';
-import map from 'lodash/map';
 import {Link} from 'react-router';
+import {bgImage} from 'src/services/utils';
 import withStore from 'src/flux/with-store.jsx';
 
 import css from './feed.css';
+
+import Sidebar from 'src/components/sidebar.jsx';
 
 
 type Props = {
@@ -16,10 +18,13 @@ type Props = {
 
 const Feed = ({store}: Props) => (
   <div className={css.bg}>
-    <div className={css.feed}>
-      { map(store.items, item => (
-        <ArticleSummary key={item.id} item={item} />
-      )) }
+    <div className={css.scroll}>
+      <div className={css.feed}>
+        { store.feed.map(id => (
+          <ArticleSummary key={id} item={store.items[id]} />
+        )) }
+      </div>
+      <Sidebar className={css.sidebar} store={store} />
     </div>
   </div>
 );
@@ -41,6 +46,9 @@ const ArticleSummary = ({item}: {item: Item}) => (
       </div>
     </div>
     <Link className={css.text} to={`/${item.id}`}>
+      { item.photo &&
+        <div className={css.photo} style={bgImage(item.photo)}></div>
+      }
       <h3 className={css.title}>{item.title}</h3>
       <h4 className={css.subtitle}>{item.subtitle}</h4>
       <p className={css.hint}>{item.text.split('\n')[0]}</p>

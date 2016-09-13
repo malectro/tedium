@@ -5,17 +5,26 @@
   background: rgb(250, 250, 250);
 }
 
-.feed {
+.scroll {
   composes: page from 'src/styles/ui.css';
+}
+
+.feed {
   flex-flow: column;
   flex: 1 0 0;
   list-style: none;
   padding: 0;
 }
 
+.sidebar {
+  flex-flow: column;
+  width: 312px;
+  padding-left: 40px;
+}
+
 .article {
   flex-flow: column;
-  max-width: 660px;
+  /* max-width: 660px; */
   padding: 20px;
   margin-bottom: 10px;
   box-shadow: 0 1px 4px rgba(0,0,0,.04);
@@ -49,6 +58,14 @@
 
 .text {
   margin-top: 10px;
+}
+
+.photo {
+  height: 186px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  background: gray center;
+  background-size: cover;
 }
 
 .title {

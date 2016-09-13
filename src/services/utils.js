@@ -14,6 +14,12 @@ export function classify() {
   }).flatten().without(null).join(' ');
 }
 
+export function bgImage(src) {
+  if (src) {
+    return {backgroundImage: `url('${src}')`};
+  }
+}
+
 export function cloneWith() {
   return _.assign.call(_, {}, ...arguments);
 }
